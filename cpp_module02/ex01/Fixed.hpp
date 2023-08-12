@@ -2,11 +2,12 @@
 # define FIXED_HPP
 
 # include <iostream>
+#include <cmath>
 
 class Fixed
 {
 	private:
-		int value;
+		int data;
 		static const int bits = 8;
 	public:
 		Fixed();

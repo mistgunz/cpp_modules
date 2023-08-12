@@ -1,6 +1,6 @@
 #include "Fixed.hpp"
 
-int main(void)
+/*int main(void)
 {
 	Fixed a;
 	Fixed b(Fixed(5.05f) * Fixed(2));
@@ -23,4 +23,12 @@ int main(void)
 	std::cout << Fixed::min(b, c) << std::endl;
 	std::cout << Fixed::max(b, c) << std::endl;
 	return 0;
+}*/ 
+int main()
+{
+Fixed a(15);
+Fixed b(10);
+a = b - a ;
+std::cout << a << std::endl;
+
 }

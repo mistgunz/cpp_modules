@@ -1,12 +1,13 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
+#include <cmath>
 # include <iostream>
 
 class Fixed
 {
 	private:
-		int content;
+		int data;
 		static const int bits = 8;
 	public:
 		Fixed();

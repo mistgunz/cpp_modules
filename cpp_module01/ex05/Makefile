@@ -1,4 +1,4 @@
-NAME	=	harl2_0
+NAME	=	harl
 SRCS	=	main.cpp Harl.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 CC		=	c++

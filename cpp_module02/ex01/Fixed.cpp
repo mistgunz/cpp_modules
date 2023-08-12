@@ -3,7 +3,7 @@
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called" << std::endl;
-	value = 0;
+	data = 0;
 }
 
 Fixed::~Fixed()
@@ -20,30 +20,30 @@ Fixed::Fixed(const Fixed &copy)
 Fixed::Fixed(const int intVal)
 {
 	std::cout << "Int constructor called" << std::endl;
-	value = intVal * pow(2, bits);
+	data = intVal * pow(2, bits);
 }
 
 Fixed::Fixed(const float floatVal)
 {
 	std::cout << "Float constructor called" << std::endl;
-	value = floatVal * pow(2, bits);
+	data = floatVal * pow(2, bits);
 }
 
 Fixed &Fixed::operator=(const Fixed &number)
 {
 	std::cout << "Copy assigment operator called" << std::endl;
-	this->value = number.value;
+	this->data = number.data;
 	return (*this);
 }
 
 int Fixed::toInt() const
 {
-	return (value / pow(2, bits));
+	return (data / pow(2, bits));
 }
 
 float Fixed::toFloat() const
 {
-	return (value / pow(2, bits));
+	return (data / pow(2, bits));
 }
 
 std::ostream &operator<<(std::ostream &output, const Fixed &fixed)
@@ -55,11 +55,11 @@ std::ostream &operator<<(std::ostream &output, const Fixed &fixed)
 int Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return value;
+	return data;
 }
 
 void Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
-	value = raw;
+	data = raw;
 }
